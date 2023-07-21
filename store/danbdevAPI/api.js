@@ -1,72 +1,50 @@
-import axios from "axios";
+import axios from "axios"
 const danbdevAPI = axios.create({
   baseURL: "https://dan20230719b-dev-103171.botics.co",
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json"
-  }
-});
-
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 function api_docs_schema_retrieve(payload) {
-  return danbdevAPI.get(`/api-docs/schema/`, {
-    params: {
-      lang: payload.lang
-    }
-  });
+  return danbdevAPI.get(`/api-docs/schema/`, { params: { lang: payload.lang } })
 }
-
 function api_v1_login_create(payload) {
-  return danbdevAPI.post(`/api/v1/login/`, payload);
+  return danbdevAPI.post(`/api/v1/login/`, payload)
 }
-
 function api_v1_signup_create(payload) {
-  return danbdevAPI.post(`/api/v1/signup/`, payload);
+  return danbdevAPI.post(`/api/v1/signup/`, payload)
 }
-
 function rest_auth_login_create(payload) {
-  return danbdevAPI.post(`/rest-auth/login/`, payload);
+  return danbdevAPI.post(`/rest-auth/login/`, payload)
 }
-
 function rest_auth_logout_retrieve(payload) {
-  return danbdevAPI.get(`/rest-auth/logout/`);
+  return danbdevAPI.get(`/rest-auth/logout/`)
 }
-
 function rest_auth_logout_create(payload) {
-  return danbdevAPI.post(`/rest-auth/logout/`);
+  return danbdevAPI.post(`/rest-auth/logout/`)
 }
-
 function rest_auth_password_change_create(payload) {
-  return danbdevAPI.post(`/rest-auth/password/change/`, payload);
+  return danbdevAPI.post(`/rest-auth/password/change/`, payload)
 }
-
 function rest_auth_password_reset_create(payload) {
-  return danbdevAPI.post(`/rest-auth/password/reset/`, payload);
+  return danbdevAPI.post(`/rest-auth/password/reset/`, payload)
 }
-
 function rest_auth_password_reset_confirm_create(payload) {
-  return danbdevAPI.post(`/rest-auth/password/reset/confirm/`, payload);
+  return danbdevAPI.post(`/rest-auth/password/reset/confirm/`, payload)
 }
-
 function rest_auth_registration_create(payload) {
-  return danbdevAPI.post(`/rest-auth/registration/`, payload);
+  return danbdevAPI.post(`/rest-auth/registration/`, payload)
 }
-
 function rest_auth_registration_verify_email_create(payload) {
-  return danbdevAPI.post(`/rest-auth/registration/verify-email/`, payload);
+  return danbdevAPI.post(`/rest-auth/registration/verify-email/`, payload)
 }
-
 function rest_auth_user_retrieve(payload) {
-  return danbdevAPI.get(`/rest-auth/user/`);
+  return danbdevAPI.get(`/rest-auth/user/`)
 }
-
 function rest_auth_user_update(payload) {
-  return danbdevAPI.put(`/rest-auth/user/`, payload);
+  return danbdevAPI.put(`/rest-auth/user/`, payload)
 }
-
 function rest_auth_user_partial_update(payload) {
-  return danbdevAPI.patch(`/rest-auth/user/`, payload);
+  return danbdevAPI.patch(`/rest-auth/user/`, payload)
 }
-
 export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
@@ -82,4 +60,4 @@ export const apiService = {
   rest_auth_user_retrieve,
   rest_auth_user_update,
   rest_auth_user_partial_update
-};
+}
