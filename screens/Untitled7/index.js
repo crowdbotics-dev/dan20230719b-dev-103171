@@ -9,7 +9,7 @@ const Untitled7 = () => {
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><Text style={styles.CCRlsSWF}>Lorem ipsum…</Text></ScrollView>
+    }}><Text style={styles.CCRlsSWF}>{"aaaa"}</Text></ScrollView>
     </SafeAreaView>;
 };
 
